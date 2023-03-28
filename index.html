@@ -9,6 +9,15 @@
 <body>
     
     <script>
+        const playerSelection = "rock";
+        const choices = ['rock', 'paper', 'scissors'];
+        const computerSelection = getComputerChoice();
+
+        function getComputerChoice(){
+            let computerChoice = choices[Math.floor(Math.random() * 3)];
+            return computerChoice;  
+        }
+        console.log(getComputerChoice());
         
     </script>
 </body>
