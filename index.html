@@ -5,63 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="script.js"></script>
+    <div class="heading">
+        <h1>Rock, Paper, Scissors</h1>
+    </div>
+    
+    <div class="player-container">
+        <div class="players">
+            <h2 class="player"><span id="player-score">0 </span> Player</h2>
+            <h2 class="versus">V</h1>
+            <h2 class="computer">Computer <span id="computer-score">0</span></h2>
+        </div>
+    </div>
 
-    <!-- unused script  -->
-    <script>
-        // const selectionPrompt = prompt('Choose Rock, Paper or Scissors');
-        // const playerSelection =  selectionPrompt.toLowerCase();
-        // const choices = ['Rock', 'Paper', 'Scissors'];
-        // const computerSelection = getComputerChoice().toLowerCase();
-        // let playerScore = 0;
-        // let computerScore = 0;
-
-        // function getComputerChoice(){
-        //     let computerChoice = choices[Math.floor(Math.random() * 3)];
-        //     return computerChoice;  
-        // }
-
-        // function playRound(playerSelection, computerSelection, playScore, compScore){
-            
-
-        //     if(playerSelection === computerSelection){
-        //         return "It's a tie. " + 'computer chose ' + computerSelection
-        //     }else if(playerSelection === 'rock' && computerSelection === 'paper'){
-                
-        //         return 'computer chose ' + computerSelection + ' You lose! Paper beats Rock'
-        //     }else if(playerSelection === 'paper' && computerSelection === 'scissors'){
-                
-        //         return 'computer chose ' + computerSelection + ' You lose! Scissors beats Paper'
-        //     }else if (playerSelection === 'scissors' && computerSelection === 'rock'){
-               
-        //         return 'computer chose ' + computerSelection + ' You lose! Rock beats Scissors'
-        //     }else if (playerSelection === 'rock' && computerSelection === 'scissors'){
-                
-        //         return "You win! Computer chose " + computerSelection
-        //     }else if (playerSelection === 'scissors' && computerSelection === 'paper'){
-                
-        //         return "You win! Computer chose " + computerSelection
-        //     }else if(playerSelection === 'paper' && computerSelection === 'rock'){
-                
-        //         return "You win! Computer chose " + computerSelection
-        //     }
-        // };
-
-        // const roundResult = playRound(playerSelection, computerSelection, playerScore, computerScore);
-        // console.log(roundResult);
-
-        // if(roundResult.includes('You win')){
-        // playerScore++;
-        // } else if(roundResult.includes('You lose')){
-        // computerScore++;
-        // }
-
-        // console.log('Player score: ' + playerScore);
-        // console.log('Computer score: ' + computerScore);
-            
-        
-    </script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>

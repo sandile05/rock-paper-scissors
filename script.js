@@ -53,4 +53,4 @@ function game(rounds) {
     console.log('Final score: Player ' + playerScore + ' - ' + computerScore + ' Computer');
   }
   
-   game(5)// play 5 rounds
+  //  game(1)// play 5 rounds
