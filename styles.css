@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
@@ -85,5 +86,15 @@ button, #restart{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+footer{
+    background: #8b8888;
+    padding: 15px 23px;
+    color: var(--secondary-color);
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }
 
