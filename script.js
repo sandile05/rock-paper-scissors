@@ -10,6 +10,8 @@ function game(rounds) {
   const currentRound = document.querySelector('#current-round');
   
   const buttons = document.querySelectorAll('button');
+  const text2 = document.querySelector('#text2');
+  text2.innerHTML = 'You May Begin';
 
   // Set the current round to 0 and display the scores on the screen
   currentRound.innerHTML = round;
@@ -71,6 +73,7 @@ function game(rounds) {
       playScore.innerHTML = playerScore;
       compScore.innerHTML = computerScore;
       currentRound.innerHTML = round;
+      text2.innerHTML = 'You may begin'
       text3.innerHTML = '';
       text4.innerHTML = '';
       gameContainer.removeChild(restartBtn);
@@ -95,7 +98,8 @@ function game(rounds) {
 
         // If the current round is equal to 5, displays the final score by updating the innerHTML property of the text4 element with the player score, computer score, and the "Final score" message, and calls the endGame function to handle resetting the game.
         if (round === 5) {
-          text4.innerHTML = 'Final score: Player ' + playerScore + ' - ' + computerScore + ' Computer';
+          text4.innerHTML = 'Final score: Player ' + playerScore + ' - ' + computerScore + ' Computer', text2.innerHTML = '';
+          
           endGame();
         }
       }
