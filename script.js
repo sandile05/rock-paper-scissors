@@ -1,25 +1,32 @@
+// This function takes an argument 'rounds', which is set to 5 when the game function is called
 function game(rounds) {
   let playerScore = 0;
   let computerScore = 0;
   let round = 0;
+
+  // Get the DOM elements for the player score, computer score and current round
   const playScore = document.querySelector('#player-score');
   const compScore = document.querySelector('#computer-score');
   const currentRound = document.querySelector('#current-round');
-  currentRound.innerHTML = round;
+  
   const buttons = document.querySelectorAll('button');
 
+  // Set the current round to 0 and display the scores on the screen
+  currentRound.innerHTML = round;
   playScore.innerHTML = playerScore;
   compScore.innerHTML = computerScore;
 
+  // Get the DOM elements for the round result and final result display
   const text3 = document.querySelector('#text3');
   const text4 = document.querySelector('#text4');
 
+  // Function to randomly select a choice for the computer
   function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * 3)];
     return computerChoice;
   }
-
+  // Function to play a single round of the game
   function playRound(playerChoice) {
     const computerSelection = getComputerChoice().toLowerCase();
 
@@ -52,6 +59,7 @@ function game(rounds) {
     }
   }
 
+  // Add a click event listener to the restart button that resets the game and removes the button
   function endGame() {
     const gameContainer = document.querySelector('#game-container');
     gameContainer.innerHTML += '<button id="restart">Restart Game</button>';
@@ -72,19 +80,20 @@ function game(rounds) {
     });
   }
 
+  // This code block is adding a click event listener to each button in the array of buttons.
+  // In other words, this code block handles the logic for when a button is clicked during the game and updates the game state accordingly.
   buttons.forEach(button => {
     button.addEventListener('click', () => {
+
+      // Checks if the current round is less than 5.
       if (round < 5) {
-        const playerChoice = button.textContent.toLowerCase();
-        const roundResult = playRound(playerChoice);
-        text3.innerHTML = roundResult;
+        const playerChoice = button.textContent.toLowerCase(); // Gets the player's choice by accessing the textContent property of the button element and converting it to lowercase.
+        const roundResult = playRound(playerChoice); //Plays a round of the game using the playRound function and passes the player's choice as an argument.
+        text3.innerHTML = roundResult; //Displays the result of the round by updating the innerHTML property of the text3 element with the round result.
         round++;
         currentRound.innerHTML = round;
 
-        console.log('Round ' + (round) + ': ' + roundResult);
-        console.log('Player score: ' + playerScore);
-        console.log('Computer score: ' + computerScore);
-
+        // If the current round is equal to 5, displays the final score by updating the innerHTML property of the text4 element with the player score, computer score, and the "Final score" message, and calls the endGame function to handle resetting the game.
         if (round === 5) {
           text4.innerHTML = 'Final score: Player ' + playerScore + ' - ' + computerScore + ' Computer';
           endGame();
@@ -94,4 +103,4 @@ function game(rounds) {
   });
 }
 
-game(5); // play 
+game(5); //call the game function and play 5 round
