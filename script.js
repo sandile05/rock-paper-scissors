@@ -24,19 +24,19 @@ function game(rounds) {
     const computerSelection = getComputerChoice().toLowerCase();
 
     if (playerChoice === computerSelection) {
-      return "It's a tie. " + 'computer chose ' + computerSelection;
+      return "It's a tie. " + 'Computer chose ' + computerSelection;
     } else if (playerChoice === 'rock' && computerSelection === 'paper') {
       computerScore++;
       compScore.innerHTML = computerScore;
-      return 'computer chose ' + computerSelection + ' You lose! Paper beats Rock';
+      return 'Computer chose ' + computerSelection + ' You lose! Paper beats Rock';
     } else if (playerChoice === 'paper' && computerSelection === 'scissors') {
       computerScore++;
       compScore.innerHTML = computerScore;
-      return 'computer chose ' + computerSelection + ' You lose! Scissors beats Paper';
+      return 'Computer chose ' + computerSelection + ' You lose! Scissors beats Paper';
     } else if (playerChoice === 'scissors' && computerSelection === 'rock') {
       computerScore++;
       compScore.innerHTML = computerScore;
-      return 'computer chose ' + computerSelection + ' You lose! Rock beats Scissors';
+      return 'Computer chose ' + computerSelection + ' You lose! Rock beats Scissors';
     } else if (playerChoice === 'rock' && computerSelection === 'scissors') {
       playerScore++;
       playScore.innerHTML = playerScore;
@@ -50,6 +50,26 @@ function game(rounds) {
       playScore.innerHTML = playerScore;
       return "You win! Computer chose " + computerSelection;
     }
+  }
+
+  function endGame() {
+    const gameContainer = document.querySelector('#game-container');
+    gameContainer.innerHTML += '<button id="restart">Restart Game</button>';
+    const restartBtn = document.querySelector('#restart');
+    restartBtn.addEventListener('click', () => {
+      playerScore = 0;
+      computerScore = 0;
+      round = 0;
+      playScore.innerHTML = playerScore;
+      compScore.innerHTML = computerScore;
+      currentRound.innerHTML = round;
+      text3.innerHTML = '';
+      text4.innerHTML = '';
+      gameContainer.removeChild(restartBtn);
+      buttons.forEach(button => {
+        button.disabled = false;
+      });
+    });
   }
 
   buttons.forEach(button => {
@@ -67,6 +87,7 @@ function game(rounds) {
 
         if (round === 5) {
           text4.innerHTML = 'Final score: Player ' + playerScore + ' - ' + computerScore + ' Computer';
+          endGame();
         }
       }
     });
