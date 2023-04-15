@@ -5,10 +5,18 @@
     text-decoration: none;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
+html, body{
+    height: 100%;
     background: blanchedalmond;
+}
+.container{
+    min-height: 100%;
+    position: relative;
+}
+.container::before {
+    content: "";
+    height: 100%;
+    float: left;
 }
 .heading{
     height: 100px;
@@ -88,13 +96,14 @@ button, #restart{
     justify-content: center;
 }
 
-footer{
-    background: #8b8888;
-    padding: 15px 23px;
-    color: var(--secondary-color);
+.footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
+    position: absolute;
     bottom: 0;
-    position: fixed;
     width: 100%;
+    height: 50px; /* Change the height as needed */
+    line-height: 50px; /* Centers the content vertically */
 }
 
