@@ -12,6 +12,13 @@ html, body{
 .container{
     min-height: 100%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hidden{
+    display: none;
 }
 .container::before {
     content: "";

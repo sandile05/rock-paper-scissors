@@ -13,6 +13,11 @@ function game(rounds) {
   const text2 = document.querySelector('#text2');
   text2.innerHTML = 'You May Begin';
 
+  const startButton = document.getElementById('start-button');
+  const hiddenContent = document.getElementById('content');
+
+ 
+  
   // Set the current round to 0 and display the scores on the screen
   currentRound.innerHTML = round;
   playScore.innerHTML = playerScore;
@@ -105,6 +110,12 @@ function game(rounds) {
       }
     });
   });
+
+  startButton.addEventListener('click', () => {
+    startButton.style.display = 'none';
+    hiddenContent.classList.remove('hidden');
+  });
+
 }
 
 game(5); //call the game function and play 5 round
