@@ -15,6 +15,10 @@ body{
     gap: 10px;
     font-family: 'DotGothic16', sans-serif;
 }
+
+#start-button{
+    margin-top: 100px;
+}
 .container{
     
     position: relative;
