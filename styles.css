@@ -17,9 +17,7 @@ html, body{
     justify-content: center;
     align-items: center;
 }
-.hidden{
-    display: none;
-}
+
 .container::before {
     content: "";
     height: 100%;
@@ -110,7 +108,7 @@ button, #restart{
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50px; /* Change the height as needed */
-    line-height: 50px; /* Centers the content vertically */
+    height: 50px; 
+    line-height: 50px;
 }
 
