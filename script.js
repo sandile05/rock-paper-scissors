@@ -106,23 +106,28 @@ function game() {
     button.addEventListener("click", () => {
       // Checks if the current round is less than 5.
       if (playerScore < 6 || computerScore < 6) {
-        const playerChoice = button.textContent.toLowerCase(); // Gets the player's choice by accessing the textContent property of the button element and converting it to lowercase.
-        const roundResult = playRound(playerChoice); //Plays a round of the game using the playRound function and passes the player's choice as an argument.
-        text3.innerHTML = roundResult; //Displays the result of the round by updating the innerHTML property of the text3 element with the round result.
+        const playerChoice = button.textContent.toLowerCase();
+        const roundResult = playRound(playerChoice);
+        text3.innerHTML = roundResult;
         round++;
         currentRound.innerHTML = round;
-
-        // If the current round is equal to 5, displays the final score by updating the innerHTML property of the text4 element with the player score, computer score, and the "Final score" message, and calls the endGame function to handle resetting the game.
+  
+        // If the current round is equal to 5, displays the final score and disables the buttons.
         if (playerScore === 5 || computerScore === 5) {
-          (text4.innerHTML =
+          text4.innerHTML =
             "Final score: Player " +
             playerScore +
             " - " +
             computerScore +
-            " Computer"),
-            (text2.innerHTML = "");
-
+            " Computer";
+          text2.innerHTML = "";
+  
           endGame();
+  
+          // Disable the buttons
+          buttons.forEach((button) => {
+            button.disabled = true;
+          });
         }
       }
     });
