@@ -133,6 +133,7 @@ function game() {
     });
   });
 
+  //show heidden elements when button is clickd to start the game
   myButton.addEventListener("click", () => {
     myHiddenElement.style.display = "block";
     myButton.style.display = "none";
