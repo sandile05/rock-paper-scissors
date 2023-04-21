@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
-:root {
-  --shadow-color: #ff9e9e;
-  --shadow-color-light: white;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -12,13 +7,10 @@
   text-decoration: none;
   color: white;
 }
-a {
-  color: white;
-}
 
 body {
   height: 100vh;
-  background-color: #192824;
+  background-color: #01291e;
   display: grid;
   place-items: center;
   gap: 10px;
@@ -59,7 +51,7 @@ h1 {
   color: #fff6a9;
   text-align: center;
   animation: blink 12s infinite;
-  -webkit-animation: blink 12s infinite;
+  -webkit-animation: blink 6s infinite;
 }
 
 @-webkit-keyframes blink {
@@ -133,7 +125,8 @@ h1 {
 }
 
 .text,
-#text2, #text3 {
+#text2,
+#text3 {
   text-align: center;
   padding: 30px 0;
 }
@@ -144,8 +137,8 @@ h1 {
   transition: all 0.4s ease-in-out;
 }
 
-.orange-text{
-    color: yellow
+.orange-text {
+  color: yellow;
 }
 
 .result-text {
@@ -160,24 +153,6 @@ h1 {
   margin-bottom: 20px;
   transition: all 0.4s ease-in-out;
 }
-
-/* button,
-#restart {
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  background-color: white;
-  border-radius: 4px;
-  padding: 8px 18px;
-  font-size: 10px;
-  font-weight: 600;
-  color: #2d3748;
-  border: 1px solid #cbd5e0;
-  line-height: 20px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  transition: all 0.4s ease-in-out;
-} */
 
 #game-container {
   display: flex;
@@ -196,41 +171,41 @@ h1 {
   line-height: 50px;
 }
 
-
-/* CSS */
-button, #restart{
+button,
+#restart {
+  font-family: "DotGothic16", sans-serif;
   appearance: none;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 40em;
   border-style: none;
-  box-shadow: #ADCFFF 0 -12px 6px inset;
+  box-shadow: #adcfff 0 -12px 6px inset;
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: -.24px;
+  letter-spacing: -0.24px;
   margin: 0;
   outline: none;
   padding: 1rem 1.3rem;
   quotes: auto;
   text-align: center;
   text-decoration: none;
-  transition: all .15s;
+  transition: all 0.15s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-#restart{
-    margin-top: 10px;
-    margin-bottom: 30px;
+#restart {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-button:hover,#restart:hover {
-  background-color: #FFC229;
-  box-shadow: #FF6314 0 -6px 8px inset;
+button:hover,
+#restart:hover {
+  background-color: #ffc229;
+  box-shadow: #ff6314 0 -6px 8px inset;
   transform: scale(1.125);
 }
 
@@ -241,6 +216,6 @@ button:active {
 @media (min-width: 768px) {
   button {
     font-size: 1.5rem;
-    padding: .75rem 2rem;
+    padding: 0.75rem 2rem;
   }
 }
