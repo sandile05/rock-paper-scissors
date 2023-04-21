@@ -17,7 +17,7 @@ function game() {
 
   const buttons = document.querySelectorAll("button");
   const text2 = document.querySelector("#text2");
-  text2.innerHTML = "You May Begin";
+  text2.innerHTML = '"may the odds be in your favor"';
 
   // const startButton = document.getElementById('start-button');
   // const myDiv = document.getElementById('result-text');
@@ -90,7 +90,7 @@ function game() {
       playScore.innerHTML = playerScore;
       compScore.innerHTML = computerScore;
       currentRound.innerHTML = round;
-      text2.innerHTML = "You may begin";
+      text2.innerHTML = '"may the odds be in your favor"';
       text3.innerHTML = "";
       text4.innerHTML = "";
       gameContainer.removeChild(restartBtn);
@@ -140,4 +140,4 @@ function game() {
   });
 }
 
-game(); //call the
+game(); //call the game function
