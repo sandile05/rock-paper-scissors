@@ -35,8 +35,6 @@ body {
   float: left;
 }
 header {
-  font-size: 2em;
-  font-weight: 200;
   height: 100px;
   width: 100%;
   display: flex;
@@ -46,6 +44,8 @@ header {
   gap: 100px;
 }
 h1 {
+    font-size: 60px;
+  font-weight: 300;
   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
     0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
   color: #fff6a9;
@@ -138,7 +138,7 @@ h1 {
 }
 
 .orange-text {
-  color: yellow;
+  color: orange;
 }
 
 .result-text {
@@ -212,7 +212,17 @@ button:hover,
 button:active {
   transform: scale(1);
 }
-
+@media (max-width: 600px){
+    h1{
+        font-size: 40px;
+        font-weight: 700;
+    }
+}
+@media (max-width: 377px){
+    h1{
+        font-size: 30px;
+    }
+}
 @media (min-width: 768px) {
   button {
     font-size: 1.5rem;
