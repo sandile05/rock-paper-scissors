@@ -19,8 +19,8 @@ body {
 
 #start-button,
 #restart {
-  margin-top: 30px;
-  padding: 20px;
+  margin: 30px 10px;
+
 }
 .container {
   position: relative;
@@ -221,7 +221,10 @@ button:active {
 }
 @media (max-width: 377px){
     h1{
-        font-size: 30px;
+        font-size: 20px;
+    }
+    button{
+        margin: 10px;
     }
     #restart{
         font-size: 10px;
