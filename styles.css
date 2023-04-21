@@ -9,7 +9,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   background-color: #01291e;
   display: grid;
   place-items: center;
