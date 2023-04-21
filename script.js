@@ -104,7 +104,7 @@ function game() {
   // In other words, this code block handles the logic for when a button is clicked during the game and updates the game state accordingly.
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      // Checks if the current round is less than 5.
+
       if (playerScore < 6 || computerScore < 6) {
         const playerChoice = button.textContent.toLowerCase();
         const roundResult = playRound(playerChoice);
