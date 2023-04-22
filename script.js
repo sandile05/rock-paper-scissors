@@ -81,7 +81,7 @@ function game() {
   // Add a click event listener to the restart button that resets the game and removes the button
   function endGame() {
     const gameContainer = document.querySelector("#game-container");
-    gameContainer.innerHTML += '<button id="restart">Restart Game</button>';
+    gameContainer.innerHTML += '<button id="restart">Restart</button>';
     const restartBtn = document.querySelector("#restart");
     restartBtn.addEventListener("click", () => {
       playerScore = 0;
